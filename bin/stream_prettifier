@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+require 'stream_prettifier'
+
+load_user_preferences
+
+while STDIN.gets
+    current_line = $_
+    current_line.gsub!(/\n/, "")
+    current_line = apply_color(current_line)
+    puts current_line if current_line.length > 0
+end
