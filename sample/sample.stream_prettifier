@@ -1,0 +1,12 @@
+# save as ~/.stream_prettifier
+# Use ruby to modify the line to be displayed (or not)
+
+# Use colorize methods to add foreground and background colors
+if_seen /verde_fopen: fopen failed for/ do |line|
+    line.white.on_red
+end
+
+# Hide from log
+if_seen /ActivityManager/ do |line|
+    ""
+end
