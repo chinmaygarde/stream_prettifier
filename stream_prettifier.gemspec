@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chinmay Garde"]
-  s.date = "2012-09-15"
+  s.date = "2012-09-16"
   s.description = "Custom rules to prettify stream output"
   s.email = "chinmaygarde@gmail.com"
   s.executables = ["stream_prettifier"]
@@ -27,6 +27,8 @@ Gem::Specification.new do |s|
     "VERSION",
     "bin/stream_prettifier",
     "lib/stream_prettifier.rb",
+    "sample/sample.stream_prettifier",
+    "stream_prettifier.gemspec",
     "test/helper.rb"
   ]
   s.homepage = "http://github.com/chinmaygarde/stream_prettifier"
