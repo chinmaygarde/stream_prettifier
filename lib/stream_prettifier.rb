@@ -1,7 +1,9 @@
 require 'etc'
 require 'colorize'
+require 'iconv'
 
 CUSTOMIZATIONS = []
+ICONV = Iconv.new('UTF-8//IGNORE', 'UTF-8')
 
 class Customization
     def initialize(regex, action)
@@ -29,6 +31,7 @@ end
 
 def apply_color(line)
     CUSTOMIZATIONS.each do |c|
+        line = ICONV.iconv(line + ' ')[0..-2]
         line = c.action.call(line) if line.match(c.regex)
     end
     line
