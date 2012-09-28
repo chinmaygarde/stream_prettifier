@@ -1,10 +1,14 @@
 #!/usr/bin/env ruby
 require 'stream_prettifier'
+require 'iconv'
+
+ICONV = Iconv.new('UTF-8//IGNORE', 'UTF-8')
 
 load_user_preferences
 
 while STDIN.gets
     current_line = $_
+    current_line = ICONV.iconv(current_line + ' ')[0..-2]
     current_line.gsub!(/\n/, "")
     current_line = apply_color(current_line)
     puts current_line if current_line.length > 0
