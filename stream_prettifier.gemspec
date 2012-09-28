@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "stream_prettifier"
-  s.version = "0.1.1"
+  s.version = "0.1.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Chinmay Garde"]
-  s.date = "2012-09-20"
+  s.date = "2012-09-28"
   s.description = "Custom rules to prettify stream output"
   s.email = "chinmaygarde@gmail.com"
   s.executables = ["stream_prettifier"]
